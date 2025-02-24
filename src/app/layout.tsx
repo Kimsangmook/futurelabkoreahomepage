@@ -3,6 +3,7 @@
 import { useServerInsertedHTML } from 'next/navigation';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 import { ReactNode, useState } from 'react';
+import "@/styles/index.css";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const [styledComponentsStyleSheet] = useState(() => new ServerStyleSheet());
