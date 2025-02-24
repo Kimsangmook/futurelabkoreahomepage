@@ -3,9 +3,9 @@
 import styled, { css } from 'styled-components';
 
 
-const CommitmentsSection = () => {
+const TitleSection = () => {
   return (
-    <GridContainer id="protecting_users">
+    <GridContainer>
         <GridCol $sm={0} $md={2} $lg={2} />
 
         <GridCol $sm={4} $md={8} $lg={8}>
@@ -18,7 +18,7 @@ const CommitmentsSection = () => {
   );
 };
 
-export default CommitmentsSection;
+export default TitleSection;
 
 const GridContainer = styled.div`
   display: grid;

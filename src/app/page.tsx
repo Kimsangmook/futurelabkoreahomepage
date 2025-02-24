@@ -1,13 +1,18 @@
 import Image from "next/image";
 import Header from "@/components/Header";
-import CommitmentsSection from "@/components/CommitmentsSection";
+import Title from "@/components/Title";
+import Vision from "@/components/Vision";
+
 
 export default function Home() {
   return (
     <main>
       <Header/>
       <section>
-        <CommitmentsSection/>
+        <Title/>
+      </section>
+      <section>
+        <Vision/>
       </section>
     </main>
   );
