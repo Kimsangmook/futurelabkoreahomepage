@@ -9,11 +9,21 @@ const Header = () => {
       <Logo>🌳 FutureLAB</Logo>
       <Nav>
         <NavList>
-          <NavItem><StyledLink href="#plan">PLAN</StyledLink></NavItem>
-          <NavItem><StyledLink href="#vision">VISION</StyledLink></NavItem>
-          <NavItem><StyledLink href="#background">BACKGROUND</StyledLink></NavItem>
-          <NavItem><StyledLink href="#model">MODEL</StyledLink></NavItem>
-          <NavItem><StyledLink href="#structure">STRUCTURE</StyledLink></NavItem>
+          <NavItem>
+            <StyledLink href="#plan">PLAN</StyledLink>
+          </NavItem>
+          <NavItem>
+            <StyledLink href="#vision">VISION</StyledLink>
+          </NavItem>
+          <NavItem>
+            <StyledLink href="#background">BACKGROUND</StyledLink>
+          </NavItem>
+          <NavItem>
+            <StyledLink href="#model">MODEL</StyledLink>
+          </NavItem>
+          <NavItem>
+            <StyledLink href="#structure">STRUCTURE</StyledLink>
+          </NavItem>
         </NavList>
       </Nav>
     </HeaderContainer>

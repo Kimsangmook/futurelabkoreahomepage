@@ -2,36 +2,37 @@
 
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { GridContainer, GridCol } from '@/components/Grid';
 
 const TitleSection = () => {
   return (
     <GridContainer>
-      <GridCol $sm={0} $md={2} $lg={2} />
+      <GridCol sm={0} md={2} lg={2} />
 
-      <GridCol $sm={4} $md={8} $lg={8}>
-        <BackgroundVideo 
-              src="https://d3157wx5zs7nsu.cloudfront.net/3j_corp/renewal/video/PC_2_presentation.mp4" 
-              loop 
-              autoPlay 
-              muted 
-              playsInline 
+      <GridCol sm={4} md={8} lg={8}>
+        <BackgroundVideo
+          src="https://d3157wx5zs7nsu.cloudfront.net/3j_corp/renewal/video/PC_2_presentation.mp4"
+          loop
+          autoPlay
+          muted
+          playsInline
         />
         <AnimationContainer>
           {/* 위쪽 수평 막대 + 수직 막대 */}
           <RightBar
             initial={{ x: 0 }}
             animate={{ x: -155 }}
-            transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 1.5, ease: 'easeOut' }}
           >
             <TopHorizontalBar
-              initial={{ x: "100%", opacity: 0 }}
+              initial={{ x: '100%', opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              transition={{ duration: 1, ease: 'easeOut' }}
             />
             {/* 오른쪽 끝에서 위에서 아래로 이동하는 수직 막대 */}
             <TopVerticalBar
-              initial={{ height: "0", opacity: 0, y: -40 }}
-              animate={{ height: "40px", opacity: 1, y: 0 }}
+              initial={{ height: '0', opacity: 0, y: -40 }}
+              animate={{ height: '40px', opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
             />
           </RightBar>
@@ -49,7 +50,7 @@ const TitleSection = () => {
             <SubText
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 2.3, duration: 0.8, ease: "easeOut" }}
+              transition={{ delay: 2.3, duration: 0.8, ease: 'easeOut' }}
             >
               Make Your Future
             </SubText>
@@ -59,72 +60,31 @@ const TitleSection = () => {
           <LeftBar
             initial={{ x: 0 }}
             animate={{ x: -155 }}
-            transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 1.5, ease: 'easeOut' }}
           >
             <BottomHorizontalBar
-              initial={{ x: "-100%", opacity: 0 }}
+              initial={{ x: '-100%', opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              transition={{ duration: 1, ease: 'easeOut' }}
             />
 
             {/* 왼쪽 끝에서 아래에서 위로 이동하는 수직 막대 */}
             <BottomVerticalBar
-              initial={{ height: "0", opacity: 0, y: 40 }}
-              animate={{ height: "40px", opacity: 1, y: 0 }}
+              initial={{ height: '0', opacity: 0, y: 40 }}
+              animate={{ height: '40px', opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
             />
           </LeftBar>
         </AnimationContainer>
       </GridCol>
 
-      <GridCol $sm={0} $md={2} $lg={2} />
+      <GridCol sm={0} md={2} lg={2} />
     </GridContainer>
   );
 };
 
 export default TitleSection;
 
-// 스타일링 정의
-const GridContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(12, minmax(5px, 1fr));
-  gap: 24px;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 80px 16px;
-  scroll-margin-top: 80px;
-  background-color: #373d4c;
-  position: relative;
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(12, minmax(5px, 1fr));
-    padding: 60px 16px;
-    gap: 28px;
-    min-height: 300px;
-  }
-
-  @media (max-width: 600px) {
-    grid-template-columns: repeat(4, minmax(5px, 1fr));
-    padding: 40px 12px;
-    gap: 12px;
-    min-height: 200px;
-  }
-`;
-
-const GridCol = styled.div<{ $sm: number; $md: number; $lg: number }>`
-  display: block;
-  height: 100%;
-  grid-column: span ${({ $sm }) => $sm};
-
-  @media (min-width: 600px) {
-    grid-column: span ${({ $md }) => $md};
-  }
-
-  @media (min-width: 1024px) {
-    grid-column: span ${({ $lg }) => $lg};
-  }
-`;
 const BackgroundVideo = styled.video`
   position: absolute;
   top: 50%;
@@ -157,7 +117,6 @@ const TopHorizontalBar = styled(motion.div)`
   width: 165px;
   height: 8px;
   background-color: white;
-  border-radius: 4px;
   position: relative;
 `;
 
@@ -166,7 +125,6 @@ const TopVerticalBar = styled(motion.div)`
   width: 8px;
   height: 40px;
   background-color: white;
-  border-radius: 4px;
   position: absolute;
   left: 0;
   bottom: -34px;
@@ -185,7 +143,6 @@ const BottomHorizontalBar = styled(motion.div)`
   width: 165px;
   height: 8px;
   background-color: white;
-  border-radius: 4px;
   position: relative;
 `;
 
@@ -194,7 +151,6 @@ const BottomVerticalBar = styled(motion.div)`
   width: 8px;
   height: 40px;
   background-color: white;
-  border-radius: 4px;
   position: absolute;
   right: 0;
   top: -34px;
@@ -217,7 +173,7 @@ const MotionText = styled(motion.h1)`
   font-weight: 400;
   letter-spacing: -0.5px;
   line-height: 56px;
-  color: #FFFFFF;
+  color: #ffffff;
 `;
 
 /* SubText 마지막에 등장 */
