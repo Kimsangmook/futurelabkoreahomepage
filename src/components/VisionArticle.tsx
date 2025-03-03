@@ -41,7 +41,7 @@ export default VisionCardArticle;
 
 const Container = styled.div`
   position: relative;
-  flex-grow: 1; /* 가변적인 크기를 균등하게 유지 */
+  flex: 1;
   aspect-ratio: 1 / 1; /* 정사각형 유지 */
   perspective: 1000px;
   transition: 0.9s;
