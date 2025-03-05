@@ -6,84 +6,90 @@ import { GridContainer, GridCol } from '@/components/Grid';
 
 const TitleSection = () => {
   return (
-    <GridContainer>
-      <GridCol sm={0} md={2} lg={2} />
+    <StyledSection>
+      <GridContainer>
+        <GridCol sm={0} md={2} lg={2} />
 
-      <GridCol sm={4} md={8} lg={8}>
-        <BackgroundVideo
-          src="https://d3157wx5zs7nsu.cloudfront.net/3j_corp/renewal/video/PC_2_presentation.mp4"
-          loop
-          autoPlay
-          muted
-          playsInline
-        />
-        <AnimationContainer>
-          {/* 위쪽 수평 막대 + 수직 막대 */}
-          <RightBar
-            initial={{ x: 0 }}
-            animate={{ x: -155 }}
-            transition={{ duration: 0.8, delay: 1.5, ease: 'easeOut' }}
-          >
-            <TopHorizontalBar
-              initial={{ x: '100%', opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: 'easeOut' }}
-            />
-            {/* 오른쪽 끝에서 위에서 아래로 이동하는 수직 막대 */}
-            <TopVerticalBar
-              initial={{ height: '0', opacity: 0, y: -40 }}
-              animate={{ height: '40px', opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1 }}
-            />
-          </RightBar>
-
-          {/* 텍스트 애니메이션 */}
-          <TextContainer>
-            <MotionText
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2, duration: 1 }}
+        <GridCol sm={4} md={8} lg={8}>
+          <BackgroundVideo
+            src="https://d3157wx5zs7nsu.cloudfront.net/3j_corp/renewal/video/PC_2_presentation.mp4"
+            loop
+            autoPlay
+            muted
+            playsInline
+          />
+          <AnimationContainer>
+            {/* 위쪽 수평 막대 + 수직 막대 */}
+            <RightBar
+              initial={{ x: 0 }}
+              animate={{ x: -155 }}
+              transition={{ duration: 0.8, delay: 1.5, ease: 'easeOut' }}
             >
-              FUTURE LAB KOREA
-            </MotionText>
+              <TopHorizontalBar
+                initial={{ x: '100%', opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: 'easeOut' }}
+              />
+              {/* 오른쪽 끝에서 위에서 아래로 이동하는 수직 막대 */}
+              <TopVerticalBar
+                initial={{ height: '0', opacity: 0, y: -40 }}
+                animate={{ height: '40px', opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1 }}
+              />
+            </RightBar>
 
-            <SubText
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2.3, duration: 0.8, ease: 'easeOut' }}
+            {/* 텍스트 애니메이션 */}
+            <TextContainer>
+              <MotionText
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.2, duration: 1 }}
+              >
+                FUTURE LAB KOREA
+              </MotionText>
+
+              <SubText
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2.3, duration: 0.8, ease: 'easeOut' }}
+              >
+                Make Your Future
+              </SubText>
+            </TextContainer>
+
+            {/* 아래쪽 수평 막대 + 수직 막대 */}
+            <LeftBar
+              initial={{ x: 0 }}
+              animate={{ x: -155 }}
+              transition={{ duration: 0.8, delay: 1.5, ease: 'easeOut' }}
             >
-              Make Your Future
-            </SubText>
-          </TextContainer>
+              <BottomHorizontalBar
+                initial={{ x: '-100%', opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: 'easeOut' }}
+              />
 
-          {/* 아래쪽 수평 막대 + 수직 막대 */}
-          <LeftBar
-            initial={{ x: 0 }}
-            animate={{ x: -155 }}
-            transition={{ duration: 0.8, delay: 1.5, ease: 'easeOut' }}
-          >
-            <BottomHorizontalBar
-              initial={{ x: '-100%', opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: 'easeOut' }}
-            />
+              {/* 왼쪽 끝에서 아래에서 위로 이동하는 수직 막대 */}
+              <BottomVerticalBar
+                initial={{ height: '0', opacity: 0, y: 40 }}
+                animate={{ height: '40px', opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1 }}
+              />
+            </LeftBar>
+          </AnimationContainer>
+        </GridCol>
 
-            {/* 왼쪽 끝에서 아래에서 위로 이동하는 수직 막대 */}
-            <BottomVerticalBar
-              initial={{ height: '0', opacity: 0, y: 40 }}
-              animate={{ height: '40px', opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1 }}
-            />
-          </LeftBar>
-        </AnimationContainer>
-      </GridCol>
-
-      <GridCol sm={0} md={2} lg={2} />
-    </GridContainer>
+        <GridCol sm={0} md={2} lg={2} />
+      </GridContainer>
+    </StyledSection>
   );
 };
 
 export default TitleSection;
+
+const StyledSection = styled.section`
+  background-color: #373d4c;
+`;
 
 const BackgroundVideo = styled.video`
   position: absolute;
@@ -102,6 +108,7 @@ const AnimationContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 25px;
+  padding: 180px 0px;
 `;
 
 /* 수평 막대 + 수직 막대 컨테이너 */
