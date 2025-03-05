@@ -46,6 +46,7 @@ const Container = styled.div`
   aspect-ratio: 1 / 1; /* 정사각형 유지 */
   perspective: 1000px;
   transition: 0.9s;
+  cursor: pointer;
 `;
 
 const BoxFrontStyles = css<{ $backgroundUrl?: string }>`
