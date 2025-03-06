@@ -88,7 +88,7 @@ const TitleSection = () => {
 export default TitleSection;
 
 const StyledSection = styled.section`
-  background-color: #373d4c;
+  background-color: black;
 `;
 
 const BackgroundVideo = styled.video`

@@ -14,7 +14,6 @@ export default GridContainer;
 const StyledGridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, minmax(5px, 1fr));
-  gap: 24px;
   align-items: center;
   justify-content: center;
   max-width: 1200px;
@@ -24,11 +23,9 @@ const StyledGridContainer = styled.div`
 
   @media (min-width: ${TABLET}) {
     grid-template-columns: repeat(12, minmax(5px, 1fr));
-    gap: 12px;
   }
 
   @media (min-width: ${DESKTOP}) {
     grid-template-columns: repeat(12, minmax(5px, 1fr));
-    gap: 28px;
   }
 `;

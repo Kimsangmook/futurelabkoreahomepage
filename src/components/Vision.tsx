@@ -41,7 +41,7 @@ const Vision = () => {
 export default Vision;
 
 const StyledSection = styled.section`
-  background-color: #fffef3;
+  background-color: black;
 `;
 
 const VisionContainer = styled.div`
