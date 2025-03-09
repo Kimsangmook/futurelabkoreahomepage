@@ -1,9 +1,11 @@
 'use client';
 
-import styled, { css } from 'styled-components';
-import { GridContainer, GridCol } from '@/components/Grid';
-import VisionCardArticle from './\bVisionArticle';
 import { DESKTOP, TABLET } from '@/styles/breakpoint';
+import { GridCol, GridContainer } from '@/components/Grid';
+import styled, { css } from 'styled-components';
+
+import VisionCardArticle from './\bVisionArticle';
+
 const Vision = () => {
   return (
     <StyledSection>
@@ -15,17 +17,17 @@ const Vision = () => {
             <VisionArticleContainer>
               <VisionCardArticle
                 frontText="VISION"
-                backText="기업의 사회공헌과 사회적 책임의 실현"
+                backText="새로운 도전을 통해 모두가 꿈꾸는 세상을 뛰어넘는 이상을 만든다"
                 url="/images/vision.png"
               />
               <VisionCardArticle
                 frontText="MISSION"
-                backText="제로 에너지 팜 시스템의 구축과 기술개발"
+                backText="제로에너지 팜 시스템을 실현해 지속가능한 소비를 창출한다"
                 url="/images/mission.png"
               />
               <VisionCardArticle
                 frontText="VALUE"
-                backText="이타심과 배려에 기초한 고민과 성공을 향한 열정"
+                backText="이타심과 배려에 기초한 고민과 미래의 모습을 향한 열정"
                 url="/images/value.png"
               />
             </VisionArticleContainer>
