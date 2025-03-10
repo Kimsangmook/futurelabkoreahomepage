@@ -5,7 +5,9 @@ import Header from '@/components/Header';
 import Image from 'next/image';
 import Title from '@/components/Title';
 import Vision from '@/components/Vision';
-
+import UrbanFarm from '@/components/UrbanFarm';
+import VerticalFarm from '@/components/VerticalFarm';
+import HorizonTitle from '@/components/HorizonTitle';
 export default function Home() {
   return (
     <main>
@@ -13,6 +15,9 @@ export default function Home() {
       <Title />
       <Features />
       <Vision />
+      <UrbanFarm />
+      <HorizonTitle />
+      <VerticalFarm />
       <Footer />
       <ComingSoonModal />
     </main>

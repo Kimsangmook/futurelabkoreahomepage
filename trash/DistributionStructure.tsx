@@ -2,7 +2,7 @@
 
 import styled from 'styled-components';
 import Image from 'next/image';
-import { GridCol, GridContainer } from './Grid';
+import { GridCol, GridContainer } from '../src/components/Grid';
 
 const DistributionStructure = () => {
   return (
