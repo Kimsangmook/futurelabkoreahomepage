@@ -12,7 +12,7 @@ const HorizonTitle = () => {
 
         <GridCol sm={4} md={8} lg={8}>
           <HorizonContent>
-            <Title>Smart Form with Future</Title>
+            <Title>Smart Farm with Future</Title>
           </HorizonContent>
         </GridCol>
 
