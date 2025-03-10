@@ -67,6 +67,7 @@ const Description = styled.div`
   text-align: center;
   line-height: 1.5;
   max-width: 300px;
+  color: #ffffff;
 `;
 
 const BackContainer = styled.div`
