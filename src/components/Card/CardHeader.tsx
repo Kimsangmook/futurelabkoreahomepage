@@ -9,7 +9,7 @@ const CardHeader = () => {
       <Subtitle>
         우리의 미래, <StrongText>Future Lab Korea</StrongText> 의 가치
       </Subtitle>
-      <Contack>Contack Us</Contack>
+      <Contact href="mailto:admin@futurelabkorea.com">Contact Us</Contact>
     </HeaderContainer>
   );
 };
@@ -30,12 +30,13 @@ const StrongText = styled.span`
   font-weight: bold;
 `;
 
-const Contack = styled.a`
+const Contact = styled.a`
   display: inline-block;
   margin-top: 20px;
   font-size: 16px;
   color: white;
   cursor: pointer;
+  text-decoration: none;
 
   &:hover {
     text-decoration: underline;
