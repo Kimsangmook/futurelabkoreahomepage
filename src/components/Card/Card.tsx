@@ -45,7 +45,7 @@ const CardWrapper = styled.div`
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     transition: background 0.3s ease-in-out;
   }
 
@@ -54,7 +54,7 @@ const CardWrapper = styled.div`
   }
 
   &:hover:before {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.2);
   }
 `;
 
