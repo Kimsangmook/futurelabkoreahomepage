@@ -20,7 +20,7 @@ const UrbanFarm = () => {
               <p>
                 <strong>폐건물 모델:</strong> NPL 건물, 폐공장
               </p>
-              <p>산재생 에너지 기반 시설</p>
+              <p>신재생 에너지 기반 시설</p>
               <p>미매각 건물 활용으로 사회적 문제 포커싱</p>
               <p>새로운 문화적 공간 창출</p>
             </Description>
