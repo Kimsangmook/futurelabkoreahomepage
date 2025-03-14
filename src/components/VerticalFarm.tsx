@@ -13,15 +13,12 @@ const VerticalFarm = () => {
         <GridCol sm={2} md={6} lg={6}>
           <VerticalContent>
             <Title>폐교형 상생 수직농장</Title>
-            <SubTitle></SubTitle>
             <SubTitle>YOUTH VERTICAL FARM</SubTitle>
             <Description>
-              <p>
-                <strong>폐교 모델:</strong> 인구소멸지역, 폐교
-              </p>
+              <p>인구소멸지역, 폐교</p>
               <p>신재생 에너지 기반 시설</p>
               <p>청년, 퇴직 공무원 고용</p>
-              <p>지역 경제 및 인구 활성화 포커싱</p>
+              <p>지역 경제 및 인구 활성화</p>
             </Description>
           </VerticalContent>
         </GridCol>

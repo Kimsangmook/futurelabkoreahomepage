@@ -11,33 +11,33 @@ const FeaturesClient = () => {
     {
       icon: 'nextjs',
       title: 'We Are Next Z',
-      description: 'MZ generation leading the way to innovative business opportunities.',
+      description: '새로운 세대가 이끄는 혁신적 비즈니스의 가능성',
     },
-    {
-      icon: 'react',
-      title: 'Energy',
-      description: 'Promoting sustainability and eco-friendly solutions through technology.',
-    },
+    // {
+    //   icon: 'react',
+    //   title: 'Energy',
+    //   description: 'Promoting sustainability and eco-friendly solutions through technology.',
+    // },
     {
       icon: 'database',
       title: 'Sustainable Success',
-      description: 'Achieving lasting growth powered by data-driven innovation.',
+      description: '기술을 통한 지속 가능성과 친환경 솔루션 촉진',
     },
     {
       icon: 'component',
-      title: 'Green Innovative',
-      description: 'Differentiating green services through creativity and innovative ideas.',
+      title: 'Mutual Innovative',
+      description: '객체들의 상호작용으로 형성하는 혁신',
     },
-    {
-      icon: 'auth',
-      title: 'Trust & Influence',
-      description: 'Building trust through reliable security and influential solutions.',
-    },
-    {
-      icon: 'stripe',
-      title: 'New Possibilities',
-      description: 'Creating sustainable revenue models and unlocking new potentials.',
-    },
+    // {
+    //   icon: 'auth',
+    //   title: 'Trust & Influence',
+    //   description: 'Building trust through reliable security and influential solutions.',
+    // },
+    // {
+    //   icon: 'stripe',
+    //   title: 'New Possibilities',
+    //   description: 'Creating sustainable revenue models and unlocking new potentials.',
+    // },
   ] as const;
 
   return (

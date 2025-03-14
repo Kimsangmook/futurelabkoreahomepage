@@ -7,23 +7,23 @@ import Card from './Card';
 
 const cards = [
   {
-    title: 'Challenge',
-    subtitle: '도전',
-    description: '새로운 도전을 통해 모두가 꿈꾸는 세상을 뛰어넘는 이상을 만든다',
-    image: '/images/vision.png',
-    value: 'VISION',
-  },
-  {
-    title: 'Zero Energy',
-    subtitle: '제로 에너지',
-    description: '제로에너지 팜 시스템을 실현해 지속가능한 소비를 창출한다',
+    title: 'CHALLENGE',
+    type: 1,
+    description: '새로운 도전과 꿈을 뛰어 넘는 현실',
     image: '/images/mission.png',
     value: 'MISSION',
   },
   {
-    title: 'Consideration',
-    subtitle: '친환경',
-    description: '이타심과 배려에 기초한 고민과 미래의 모습을 향한 열정',
+    title: 'ZERO ENERGY',
+    type: 2,
+    description: '제로에너지 기반 지속 가능한 소비',
+    image: '/images/vision.png',
+    value: 'VISION',
+  },
+  {
+    title: 'CONSIDERATION',
+    type: 3,
+    description: '미래를 고무하는 이타심과 배려',
     image: '/images/value.png',
     value: 'VALUE',
   },

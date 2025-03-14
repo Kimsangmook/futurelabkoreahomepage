@@ -11,17 +11,14 @@ const UrbanFarm = () => {
       </BackContainer>
       <GridContainer>
         <GridCol sm={2} md={6} lg={6}></GridCol>
-
         <GridCol sm={2} md={6} lg={6}>
           <UrbanContent>
             <Title>도심형 수직농장</Title>
             <SubTitle>URBAN INDOOR FARM</SubTitle>
             <Description>
-              <p>
-                <strong>폐건물 모델:</strong> NPL 건물, 폐공장
-              </p>
-              <p>신재생 에너지 기반 시설</p>
-              <p>미매각 건물 활용으로 사회적 문제 포커싱</p>
+              <p>NPL 건물, 폐공장</p>
+              <p>폐공장, 폐건물</p>
+              <p>미매각 건물 활용</p>
               <p>새로운 문화적 공간 창출</p>
             </Description>
           </UrbanContent>

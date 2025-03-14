@@ -5,20 +5,19 @@ import styled from 'styled-components';
 
 interface Props {
   title: string;
-  subtitle: string;
   description: string;
   image: string;
   value: string;
+  type: number;
 }
 
-const Card = ({ title, subtitle, description, image, value }: Props) => {
+const Card = ({ title, description, image, value, type }: Props) => {
   return (
-    <CardWrapper style={{ backgroundImage: `url(${image})` }}>
+    <CardWrapper style={{ backgroundImage: `url(${image})` }} $type={type}>
       <CardContent>
+        <Value>{value}</Value>
         <CardTitle>{title}</CardTitle>
-        <CardSubtitle>{subtitle}</CardSubtitle>
         <CardDescription>{description}</CardDescription>
-        <ViewMore>{value}</ViewMore>
       </CardContent>
     </CardWrapper>
   );
@@ -26,7 +25,7 @@ const Card = ({ title, subtitle, description, image, value }: Props) => {
 
 export default Card;
 
-const CardWrapper = styled.div`
+const CardWrapper = styled.div<{ $type: number }>`
   position: relative;
   width: 300px;
   height: 400px;
@@ -36,7 +35,7 @@ const CardWrapper = styled.div`
   overflow: hidden;
   color: white;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   padding: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
@@ -62,28 +61,24 @@ const CardContent = styled.div`
   position: relative;
   z-index: 2;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0px 0px 24px 0px;
 `;
 
 const CardTitle = styled.h3`
-  font-size: 24px;
-  font-weight: bold;
-`;
-
-const CardSubtitle = styled.p`
-  font-size: 18px;
-  margin-top: 10px;
+  font-size: 27px;
   font-weight: bold;
 `;
 
 const CardDescription = styled.p`
-  font-size: 14px;
-  margin-top: 5px;
+  font-size: 19px;
 `;
 
-const ViewMore = styled.a`
+const Value = styled.a`
   display: block;
-  margin-top: 10px;
-  font-size: 16px;
+  font-size: 20px;
   color: #00ff99;
   opacity: 0;
   visibility: hidden;
