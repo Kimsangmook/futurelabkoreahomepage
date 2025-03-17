@@ -10,7 +10,7 @@ const FeaturesClient = () => {
   const features = [
     {
       icon: 'nextjs',
-      title: 'We Are Next Z',
+      title: 'We Are The Next Z',
       description: '새로운 세대가 이끄는 혁신적 비즈니스의 가능성',
     },
     // {
@@ -25,7 +25,7 @@ const FeaturesClient = () => {
     },
     {
       icon: 'component',
-      title: 'Mutual Innovative',
+      title: 'Mutual innovation',
       description: '객체들의 상호작용으로 형성하는 혁신',
     },
     // {
