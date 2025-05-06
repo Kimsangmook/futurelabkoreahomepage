@@ -13,14 +13,14 @@ import CardSection from '@/components/Card/CardSection';
 export default function Home() {
   return (
     <main>
-      <Header />
+      {/* <Header /> */}
       <Title />
-      <Features />
+      {/* <Features /> */}
       {/* <Vision /> */}
-      <CardSection />
+      {/* <CardSection />
       <UrbanFarm />
       <HorizonTitle />
-      <VerticalFarm />
+      <VerticalFarm /> */}
       <Footer />
       <ComingSoonModal />
     </main>
