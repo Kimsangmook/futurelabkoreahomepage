@@ -1,75 +1,40 @@
 'use client';
 
-import styled from 'styled-components';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const Header = () => {
+export default function Header() {
+  const [hidden, setHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        // 스크롤 내리면 헤더 숨기기
+        setHidden(true);
+      } else {
+        // 스크롤 올리면 헤더 보이기
+        setHidden(false);
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <HeaderContainer>
-      <Logo>🌳 FutureLAB</Logo>
-      <Nav>
-        <NavList>
-          <NavItem>
-            <StyledLink href="#plan">PLAN</StyledLink>
-          </NavItem>
-          <NavItem>
-            <StyledLink href="#vision">VISION</StyledLink>
-          </NavItem>
-          <NavItem>
-            <StyledLink href="#background">BACKGROUND</StyledLink>
-          </NavItem>
-          <NavItem>
-            <StyledLink href="#model">MODEL</StyledLink>
-          </NavItem>
-          <NavItem>
-            <StyledLink href="#structure">STRUCTURE</StyledLink>
-          </NavItem>
-        </NavList>
-      </Nav>
-    </HeaderContainer>
+    <header
+      className={`fixed top-0 left-0 w-full h-[49px] bg-white shadow-sm z-30 transform transition-transform duration-300 ${
+        hidden ? '-translate-y-full' : 'translate-y-0'
+      }`}
+    >
+      <div className="container mx-auto flex items-center h-full px-5">
+        <Link href="/" className="flex items-center h-full">
+          <img src="/BI.svg" alt="Future Lab Korea" className="h-[30px] w-auto" />
+        </Link>
+      </div>
+    </header>
   );
-};
-
-export default Header;
-
-const HeaderContainer = styled.header`
-  position: static;
-  top: -64px;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-`;
-
-const Logo = styled.div`
-  font-size: 1.5rem;
-  font-weight: bold;
-`;
-
-const Nav = styled.nav``;
-
-const NavList = styled.ul`
-  display: flex;
-  gap: 20px;
-  list-style: none;
-`;
-
-const NavItem = styled.li``;
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: #333;
-  font-size: 1rem;
-  font-weight: 500;
-  &:hover {
-    color: #0070f3;
-  }
-`;
+}
