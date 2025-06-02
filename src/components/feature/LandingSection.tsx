@@ -10,7 +10,7 @@ export default function LandingSection() {
         <h1 className="text-gray-800 text-[32px] sm:text-[48px] font-bold leading-[48px] sm:leading-[64px] text-center">
           우리는 가장 가까운 텃밭,
           <br />
-          도심형 수직농장을 만들어갑니다.
+          도심형 스마트팜을 만들어갑니다.
         </h1>
       </div>
     </section>
